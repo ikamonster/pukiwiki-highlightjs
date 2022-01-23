@@ -1,4 +1,4 @@
-# PukiWiki用プラグイン<br>タブ表示 highlightjs.inc.php
+# PukiWiki用プラグイン<br>シンタックスハイライト highlightjs.inc.php
 
 [highlight.js](https://highlightjs.org/)により整形済みテキストをシンタックスハイライト（文法強調）表示する[PukiWiki](https://pukiwiki.osdn.jp/)用プラグイン。  
 対象とする整形済みテキストの直前に挿入するだけの簡単仕様です。
