@@ -5,7 +5,7 @@
 
 |対象PukiWikiバージョン|対象PHPバージョン|
 |:---:|:---:|
-|PukiWiki 1.5.3 ~ 1.5.4RC (UTF-8)|PHP 7.4 ~ 8.1|
+|PukiWiki 1.5.3 ~ 1.5.4 (UTF-8)|PHP 7.4 ~ 8.1|
 
 ## インストール
 
@@ -39,5 +39,5 @@ language … 言語名。省略すると自動判定。対応言語は highlight
 
 |定数名|値|既定値|意味|
 |:---|:---:|:---|:---|
-|PLUGIN_HIGHLIGHTJS_SCRIPT_URL| URL文字列|'//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js'|highlight.js スクリプトのURL|
-|PLUGIN_HIGHLIGHTJS_CSS_URL| URL文字列|'//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css'|highlight.js 用CSSのURL。空なら内蔵スタイルを適用|
+|PLUGIN_HIGHLIGHTJS_SCRIPT_URL| URL文字列|'//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js'|highlight.js スクリプトのURL|
+|PLUGIN_HIGHLIGHTJS_CSS_URL| URL文字列|'//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css'|highlight.js 用CSSのURL。空なら内蔵スタイルを適用|
