@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-highlightjs.inc.php, v1.00 2020 M.Taniguchi
+highlightjs.inc.php, v1.0 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 highlight.jsにより整形済みテキストをシンタックスハイライト（文法強調）表示するプラグイン。
@@ -24,8 +24,8 @@ language … 言語名。省略すると自動判定。対応言語はhighlight.
 
 /////////////////////////////////////////////////
 // シンタックスハイライトプラグイン（highlightjs.inc.php）
-if (!defined('PLUGIN_HIGHLIGHTJS_SCRIPT_URL')) define('PLUGIN_HIGHLIGHTJS_SCRIPT_URL', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js');       // highlight.jsスクリプトのURL
-if (!defined('PLUGIN_HIGHLIGHTJS_CSS_URL'))    define('PLUGIN_HIGHLIGHTJS_CSS_URL',    '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css'); // highlight.js用CSSのURL。空なら内蔵スタイルを適用
+if (!defined('PLUGIN_HIGHLIGHTJS_SCRIPT_URL')) define('PLUGIN_HIGHLIGHTJS_SCRIPT_URL', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js');       // highlight.jsスクリプトのURL
+if (!defined('PLUGIN_HIGHLIGHTJS_CSS_URL'))    define('PLUGIN_HIGHLIGHTJS_CSS_URL',    '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css'); // highlight.js用CSSのURL。空なら内蔵スタイルを適用
 
 
 function plugin_highlightjs_convert() {
