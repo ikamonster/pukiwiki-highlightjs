@@ -24,8 +24,8 @@ language … 言語名。省略すると自動判定。対応言語はhighlight.
 
 /////////////////////////////////////////////////
 // シンタックスハイライトプラグイン（highlightjs.inc.php）
-if (!defined('PLUGIN_HIGHLIGHTJS_SCRIPT_URL')) define('PLUGIN_HIGHLIGHTJS_SCRIPT_URL', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js');       // highlight.jsスクリプトのURL
-if (!defined('PLUGIN_HIGHLIGHTJS_CSS_URL'))    define('PLUGIN_HIGHLIGHTJS_CSS_URL',    '//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css'); // highlight.js用CSSのURL。空なら内蔵スタイルを適用
+if (!defined('PLUGIN_HIGHLIGHTJS_SCRIPT_URL')) define('PLUGIN_HIGHLIGHTJS_SCRIPT_URL', 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js');       // highlight.jsスクリプトのURL
+if (!defined('PLUGIN_HIGHLIGHTJS_CSS_URL'))    define('PLUGIN_HIGHLIGHTJS_CSS_URL',    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css'); // highlight.js用CSSのURL。空なら内蔵スタイルを適用
 
 
 function plugin_highlightjs_convert() {
