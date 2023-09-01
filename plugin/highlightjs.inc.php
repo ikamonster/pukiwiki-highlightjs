@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-highlightjs.inc.php, v1.0 2020 M.Taniguchi
+highlightjs.inc.php, v1.0.1 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 highlight.jsにより整形済みテキストをシンタックスハイライト（文法強調）表示するプラグイン。
@@ -64,15 +64,15 @@ EOT;
 		// JavaScriptロード
 		$body .= '<script src="' . PLUGIN_HIGHLIGHTJS_SCRIPT_URL . "\" defer></script>\n";
 
-		// 初期化：本プラグイン出力要素（_p_highlightjsクラス）の隣のpre要素を強調表示の対象とする
+		// 初期化：本プラグイン出力要素（_p_highlightjsクラス）の隣のpreまたはcode要素を強調表示の対象とする
 		$body .= <<<EOT
 <script>
 'use strict';
 document.addEventListener('DOMContentLoaded', (event) => {
 	document.querySelectorAll('._p_highlightjs').forEach((block) => {
-		var	ele = block.nextElementSibling;
-		if (ele && ele.tagName == 'PRE') {
-			var	lang = block.getAttribute('data-lang');
+		const	ele = block.nextElementSibling;
+		if (ele && (ele.tagName == 'PRE' || ele.tagName == 'CODE')) {
+			const	lang = block.getAttribute('data-lang');
 			if (lang) ele.classList.add(lang);
 			ele.classList.add('_p_highlightjs_code');
 			hljs.highlightBlock(ele);
@@ -85,7 +85,7 @@ EOT;
 		$included = true;
 	}
 
-	$body .= '<span class="_p_highlightjs" style="display:none" data-lang="' . htmlsc(trim($lang)) . '"></span>';
+	$body .= '<p class="_p_highlightjs" style="display:none" data-lang="' . htmlsc(trim($lang)) . '"></p>';
 
 	return $body;
 }
