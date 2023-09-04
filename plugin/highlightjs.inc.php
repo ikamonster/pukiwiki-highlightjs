@@ -1,7 +1,7 @@
 <?php
 /*
 PukiWiki - Yet another WikiWikiWeb clone.
-highlightjs.inc.php, v1.0.1 2020 M.Taniguchi
+highlightjs.inc.php, v1.0.2 2020 M.Taniguchi
 License: GPL v3 or (at your option) any later version
 
 highlight.jsにより整形済みテキストをシンタックスハイライト（文法強調）表示するプラグイン。
@@ -86,6 +86,8 @@ EOT;
 	}
 
 	$body .= '<p class="_p_highlightjs" style="display:none" data-lang="' . htmlsc(trim($lang)) . '"></p>';
+
+	$body = preg_replace("/((\s|\n){1,})/i", ' ', $body);	// 連続空白を単一空白に（※「//」コメント非対応）
 
 	return $body;
 }
